@@ -12,3 +12,5 @@
 	ct = commit
 	df = diff
 	br = branch
+[core]
+	editor = vim
