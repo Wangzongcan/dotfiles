@@ -1,0 +1,8 @@
+[user]
+	name = Wangzongcan
+	email = wang.zongcan@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
