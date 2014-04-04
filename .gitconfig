@@ -6,3 +6,9 @@
 	status = auto
 	branch = auto
 	ui = true
+[alias]
+	st = status
+	co = checkout
+	ct = commit
+	df = diff
+	br = branch
