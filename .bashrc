@@ -41,3 +41,10 @@ PS1+="${bldcyn}\u ${bldwht}at "
 PS1+="${bldblu}\h ${bldwht}in "
 PS1+="${bldpur}\w\n"
 PS1+="${bldylw}\$ ${txtrst}"
+
+# alias
+alias be='bundle exec'
+alias ber='bundle exec rake'
+
+# nvm
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
