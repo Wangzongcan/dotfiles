@@ -43,6 +43,10 @@ PS1+="${bldpur}\w\n"
 PS1+="${bldylw}\$ ${txtrst}"
 
 # alias
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+
+## rails
 alias be='bundle exec'
 alias ber='bundle exec rake'
 
