@@ -51,4 +51,5 @@ alias be='bundle exec'
 alias ber='bundle exec rake'
 
 # nvm
+source ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
