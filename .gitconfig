@@ -9,8 +9,9 @@
 [alias]
 	st = status
 	co = checkout
-	ct = commit
+	ci = commit
 	df = diff
 	br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 [core]
 	editor = vim
