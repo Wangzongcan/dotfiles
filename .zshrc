@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="steeef"
+ZSH_THEME="sunrise"
 #ZSH_THEME="robbyrussell"
 
 # Example aliases
@@ -49,7 +49,7 @@ ZSH_THEME="steeef"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git emacs ruby rails bundle gem)
+plugins=(git emacs rvm ruby rails bundle gem)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,6 +74,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+#cask
+export PATH="$HOME/.cask/bin:$PATH"
+source "$HOME/.cask/etc/cask_completion.zsh"
 
 # NVM
 [ -s "/home/john/.nvm/nvm.sh" ] && . "/home/john/.nvm/nvm.sh" # This loads nvm
