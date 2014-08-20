@@ -36,11 +36,8 @@ bakcyn='\[\e[46m\]'   # Cyan
 bakwht='\[\e[47m\]'   # White
 txtrst='\[\e[0m\]'    # Text Reset
 
-PS1=""
-PS1+="${bldcyn}\u ${bldwht}at "
-PS1+="${bldblu}\h ${bldwht}in "
-PS1+="${bldpur}\w\n"
-PS1+="${bldylw}\$ ${txtrst}"
+PS1=" ${bldpur}\W"
+PS1+=" ${bldylw}➜  ${txtrst}"
 
 # alias
 alias update='sudo apt-get update'
