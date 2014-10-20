@@ -5,12 +5,13 @@
 PS1=" ${bldpur}\W"
 PS1+=" ${bldcyn}» ${txtrst}"
 
+export TERM=xterm-256color
+
 # alias
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 
 alias l='ls -la'
-
 alias :q='exit'
 
 ## rails
