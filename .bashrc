@@ -9,6 +9,11 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 
 export TERM=xterm-256color
 
+# bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # alias
 alias l="ls -lha"
 alias :q="exit"
