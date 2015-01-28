@@ -18,11 +18,8 @@ fi
 alias l="ls -lha"
 alias :q="exit"
 
-# fix git
-export PATH="/usr/local/bin:$PATH"
-
-# cask
-export PATH="$(brew --prefix cask)/bin:$PATH"
+# Homebrew
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # nvm
 export NVM_DIR=~/.nvm
