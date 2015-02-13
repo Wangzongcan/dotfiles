@@ -18,6 +18,10 @@ fi
 alias l="ls -lha"
 alias :q="exit"
 
+## emacs
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
