@@ -25,7 +25,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 
 # cask
-export PATH="$(brew --prefix cask)/bin:$PATH"
+export PATH="~/.cask/bin:$PATH"
 
 # nvm
 export NVM_DIR=~/.nvm
