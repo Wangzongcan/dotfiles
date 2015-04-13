@@ -18,12 +18,14 @@ fi
 alias l="ls -lha"
 alias :q="exit"
 
-## emacs
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
-
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# emacs
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+
+# cask
+export PATH="$(brew --prefix cask)/bin:$PATH"
 
 # nvm
 export NVM_DIR=~/.nvm
