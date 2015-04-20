@@ -17,6 +17,7 @@ fi
 # alias
 alias l="ls -lha"
 alias :q="exit"
+alias be="bundle exec"
 
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
