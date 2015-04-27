@@ -15,7 +15,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # alias
-alias l="ls -lha"
+alias l="ls -lh"
+alias ll="ls -lha"
 alias :q="exit"
 alias be="bundle exec"
 
