@@ -11,7 +11,7 @@ export TERM=xterm-256color
 
 # bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+    source $(brew --prefix)/etc/bash_completion
 fi
 
 # alias
@@ -23,15 +23,15 @@ alias be="bundle exec"
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# emacs
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-
 # cask
 export PATH="~/.cask/bin:$PATH"
 
 # nvm
-export NVM_DIR=~/.nvm
+export NVM_DIR="~/.nvm"
 source $(brew --prefix nvm)/nvm.sh
+
+# emacs
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
