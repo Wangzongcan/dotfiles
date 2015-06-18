@@ -24,14 +24,14 @@ alias be="bundle exec"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # cask
-export PATH="~/.cask/bin:$PATH"
+export PATH="$HOME/.cask/bin:$PATH"
 
 # nvm
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # emacs
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
