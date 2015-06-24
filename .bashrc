@@ -1,7 +1,4 @@
-[ -s "$HOME/.dotfiles/colors.bash" ] && source "$HOME/.dotfiles/colors.bash"
-
-PS1=" ${bldpur}\W"
-PS1+=" ${bldcyn}» ${txtrst}"
+PS1=" \[\e[1;35m\]\W \[\e[1;36m\]» \[\e[0m\]"
 
 # export
 export CLICOLOR=1
@@ -35,6 +32,10 @@ source $(brew --prefix nvm)/nvm.sh
 
 # emacs
 alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs"
+alias daemon="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs --daemon"
+alias ec="emacsclient -c -a ''"
+alias ef="emacsclient -c -a '' -F '((fullscreen . maximized))'"
+alias e="emacsclient -t"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
