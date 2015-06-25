@@ -27,9 +27,6 @@ export PATH="$HOME/.cask/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-# autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 # emacs
 alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs"
 alias daemon="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs --daemon"
