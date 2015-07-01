@@ -28,11 +28,8 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # emacs
-alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs"
-alias daemon="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs --daemon"
-alias ec="emacsclient -c -a ''"
-alias ef="emacsclient -c -a '' -F '((fullscreen . maximized))'"
-alias e="emacsclient -t"
+alias emacs="$(brew --prefix emacs)/bin/emacs"
+alias emacsclient="$(brew --prefix emacs)/bin/emacsclient"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
