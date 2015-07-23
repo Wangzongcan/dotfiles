@@ -5,6 +5,8 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
 export TERM=xterm-256color
+export EDITOR='$(brew --prefix emacs)/bin/emacsclient -ct'
+export VISUAL='emacsclient -c -a emacs'
 
 # bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -28,8 +30,8 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # emacs
-alias emacs="$(brew --prefix emacs)/bin/emacs"
-alias emacsclient="$(brew --prefix emacs)/bin/emacsclient"
+alias es="$(brew --prefix emacs)/bin/emacs --daemon"
+alias emacs="$(brew --prefix emacs)/bin/emacsclient -ct"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
