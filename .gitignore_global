@@ -1,0 +1,6 @@
+# .gitignore_global
+
+## gtags
+GPATH
+GRTAGS
+GTAGS
