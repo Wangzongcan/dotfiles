@@ -5,7 +5,7 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
 export TERM=xterm-256color
-export EDITOR='$(brew --prefix emacs)/bin/emacsclient -ct'
+export EDITOR='$(brew --prefix emacs-mac)/bin/emacsclient -ct'
 export VISUAL='emacsclient -c -a emacs'
 
 # bash-completion
@@ -22,6 +22,13 @@ alias be="bundle exec"
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Postgresql
+export PGDATA="/usr/local/var/postgres"
+export PGLOG="/usr/local/var/log/postgres/server.log"
+
+alias pg.start="pg_ctl start -l $PGLOG"
+alias pg.stop="pg_ctl stop -s -m fast"
+
 # cask
 export PATH="$HOME/.cask/bin:$PATH"
 
@@ -30,8 +37,8 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # emacs
-alias es="$(brew --prefix emacs)/bin/emacs --daemon"
-alias emacs="$(brew --prefix emacs)/bin/emacsclient -ct"
+alias es="$(brew --prefix emacs-mac)/bin/emacs --daemon"
+alias emacs="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
 
 # rvm
 if [ -d "$HOME/.rvm" ]; then
