@@ -1,4 +1,8 @@
-PS1=" \[\e[1;35m\]\W \[\e[1;36m\]» \[\e[0m\]"
+ColorOff='\e[0m'
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+PS1=" ${bldpur}\W${bldblu}\$(__git_ps1) ${bldcyn}» ${ColorOff}"
 
 # export
 export CLICOLOR=1
@@ -21,6 +25,13 @@ alias be="bundle exec"
 
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# Git
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM='verbose'
+export GIT_PS1_DESCRIBE_STYLE="branch"
 
 # Postgresql
 export PGDATA="/usr/local/var/postgres"
