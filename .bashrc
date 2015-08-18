@@ -5,8 +5,8 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
 export TERM=xterm-256color
-export EDITOR='$(brew --prefix emacs-mac)/bin/emacsclient -ct'
-export VISUAL='emacsclient -c -a emacs'
+export EDITOR="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
+export VISUAL="emacsclient -c -a emacs"
 
 # bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -29,22 +29,16 @@ export PGLOG="/usr/local/var/log/postgres/server.log"
 alias pg.start="pg_ctl start -l $PGLOG"
 alias pg.stop="pg_ctl stop -s -m fast"
 
-# cask
+# Cask
 export PATH="$HOME/.cask/bin:$PATH"
 
-# nvm
+# NVM
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-# emacs
-alias es="$(brew --prefix emacs-mac)/bin/emacs --daemon"
-alias emacs="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
+# Emacs
+alias e="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
 
-# rvm
-if [ -d "$HOME/.rvm" ]; then
-    # Load RVM into a shell session *as a function*
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-    # Add RVM to PATH for scripting
-    export PATH="$PATH:$HOME/.rvm/bin"
-fi
+# Chruby
+source $(brew --prefix chruby)/share/chruby/chruby.sh
+source $(brew --prefix chruby)/share/chruby/auto.sh
