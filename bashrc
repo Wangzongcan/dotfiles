@@ -1,7 +1,3 @@
-# export
-export CLICOLOR=1
-export LSCOLORS=dxfxcxdxbxegedabagacad
-
 export TERM=xterm-256color
 export EDITOR="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
 export VISUAL="emacsclient -c -a emacs"
@@ -12,10 +8,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # alias
-alias l="ls -lh"
-alias ll="ls -lha"
+alias l="ls -lh --color=auto"
+alias ls="ls --color=auto"
+alias ll="ls -lha --color=auto"
 alias :q="exit"
-alias be="bundle exec"
 
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
