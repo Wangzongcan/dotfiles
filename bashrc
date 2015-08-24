@@ -28,15 +28,15 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose'
 export GIT_PS1_DESCRIBE_STYLE="branch"
 
+# Coreutils
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
 # Postgresql
 export PGDATA="/usr/local/var/postgres"
 export PGLOG="/usr/local/var/log/postgres/server.log"
 
 alias pg.start="pg_ctl start -l $PGLOG"
 alias pg.stop="pg_ctl stop -s -m fast"
-
-# Cask
-export PATH="$HOME/.cask/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -48,6 +48,7 @@ alias e="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
 # Chruby
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
+chruby ruby
 
 # PS1
 source "$HOME/.bash/color.sh"
