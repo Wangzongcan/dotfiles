@@ -48,7 +48,7 @@ alias e="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
 # Chruby
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
-chruby ruby
+chruby 2.2.2
 
 # PS1
 source "$HOME/.bash/color.sh"
