@@ -1,5 +1,5 @@
 export TERM=xterm-256color
-export EDITOR="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
+export EDITOR="$(brew --prefix emacs)/bin/emacsclient -ct"
 export VISUAL="emacsclient -c -a emacs"
 
 # bash-completion
@@ -39,7 +39,12 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # Emacs
-alias e="$(brew --prefix emacs-mac)/bin/emacsclient -ct"
+alias es="$(brew --prefix emacs)/bin/emacs --daemon"
+alias e="$(brew --prefix emacs)/bin/emacsclient -ct"
+alias emacs="$(brew --prefix emacs)/bin/emacsclient -ct"
+
+# Vim
+alias vi=vim
 
 # Chruby
 source $(brew --prefix chruby)/share/chruby/chruby.sh
