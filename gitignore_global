@@ -1,5 +1,8 @@
 # .gitignore_global
 
+# rails
+dump.rdb
+
 ## gtags
 GPATH
 GRTAGS
