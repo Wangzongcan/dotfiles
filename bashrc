@@ -53,5 +53,4 @@ chruby 2.2.2
 
 # PS1
 source "$HOME/.bash/color.sh"
-# PS1=" ${BPurple}\W\e[m\$(__git_ps1) ${BCyan}» ${Color_Off}"
-PROMPT_COMMAND='__git_ps1 "'$Purple' \W'$Color_Off'" "'$Cyan' ➜  '$Color_Off'"'
+PROMPT_COMMAND='__git_ps1 "'$Magenta' \W'$Reset'" "'$Cyan' ➜  '$Reset'"'
