@@ -34,10 +34,6 @@ export PGLOG="/usr/local/var/log/postgres/server.log"
 alias pg.start="pg_ctl start -l $PGLOG"
 alias pg.stop="pg_ctl stop -s -m fast"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-
 # Emacs
 alias es="$(brew --prefix emacs)/bin/emacs --daemon"
 alias e="$(brew --prefix emacs)/bin/emacsclient -ct"
@@ -49,7 +45,7 @@ alias vi=vim
 # Chruby
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
-chruby 2.2.2
+chruby 2.2.3
 
 # PS1
 source "$HOME/.bash/color.sh"
