@@ -16,13 +16,11 @@ alias :q="exit"
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Git
-export GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUPSTREAM='verbose'
-export GIT_PS1_DESCRIBE_STYLE="branch"
+# bash git prompt
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+    GIT_PROMPT_THEME=Default
+    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
 
 # Coreutils
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -46,7 +44,3 @@ alias vi=vim
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
 chruby 2.2.3
-
-# PS1
-source "$HOME/.bash/color.sh"
-PROMPT_COMMAND='__git_ps1 "'$Magenta' \W'$Reset'" "'$Cyan' ➜  '$Reset'"'
