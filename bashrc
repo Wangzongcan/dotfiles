@@ -18,7 +18,13 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # bash git prompt
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    GIT_PROMPT_THEME=Default
+    Cyan="\[\033[36m\]"
+    Purple="\[\033[35m\]"
+    ResetColor="\[\033[0m\]"        # Text Reset
+
+    GIT_PROMPT_THEME=Single_line
+    GIT_PROMPT_START=" _LAST_COMMAND_INDICATOR_ ${Cyan}\W${ResetColor}"
+    GIT_PROMPT_END=" ${Purple}➜ ${ResetColor}"
     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
 
