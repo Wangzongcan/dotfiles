@@ -16,18 +16,6 @@ alias :q="exit"
 # Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# bash git prompt
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    Cyan="\[\033[36m\]"
-    Purple="\[\033[35m\]"
-    ResetColor="\[\033[0m\]"        # Text Reset
-
-    GIT_PROMPT_THEME=Single_line
-    GIT_PROMPT_START=" _LAST_COMMAND_INDICATOR_ ${Cyan}\W${ResetColor}"
-    GIT_PROMPT_END=" ${Purple}➜ ${ResetColor}"
-    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
-fi
-
 # Coreutils
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
@@ -50,3 +38,9 @@ alias vi=vim
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
 chruby 2.2.3
+
+Cyan="\[\033[0;36m\]"
+Purple="\[\033[1;35m\]"
+ResetColor="\[\033[0m\]"        # Text Reset
+
+PS1=" ${Purple}\W ${Cyan}» ${ResetColor}"
