@@ -1,4 +1,5 @@
 # .gitignore_global
+.DS_Store
 
 # rails
 dump.rdb
