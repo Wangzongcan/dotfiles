@@ -1,5 +1,10 @@
 desc 'install...'
 task :install do
-  system %(ln -sv "$PWD/git/.gitconfig" "$HOME")
-  system %(ln -sv "$PWD/git/.gitignore_global" "$HOME")
+  Dir['**/{*,.*}'].each do |name|
+    next unless !File.directory?(name) && name =~ /.symlink$/
+
+    realpath = File.realpath(name)
+    linkpath = File.join(ENV['HOME'], File.basename(name).gsub('.symlink', ''))
+    system %(ln -sv "#{realpath}" "#{linkpath}")
+  end
 end

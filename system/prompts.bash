@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function __populate_git_ps1_vars () {
     if ! $(type __git_ps1 >/dev/null 2>&1); then
         return
