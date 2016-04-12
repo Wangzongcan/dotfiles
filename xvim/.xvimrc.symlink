@@ -1,0 +1,32 @@
+" base configuration
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+set pasteboard
+set clipboard=unnamed
+
+" ui configuration
+set number
+set nowrap
+set laststatus=0
+
+" map
+
+inoremap <C-a> <C-o>^
+inoremap <C-b> <Left>
+inoremap <C-d> <C-o>x
+inoremap <C-e> <C-o>$
+inoremap <C-f> <Right>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <Space>| <C-w>v
+nnoremap <Space>_ <C-w>s
+
+nnoremap <Space>n :xccmd toggleNavigatorsVisibility<CR>
+nnoremap <Space>d :xccmd toggleDebuggerVisibility<CR>
+nnoremap <Space>u :xccmd toggleUtilitiesVisibility<CR>

@@ -8,3 +8,6 @@ dump.rdb
 GPATH
 GRTAGS
 GTAGS
+
+# tern
+.tern-port
