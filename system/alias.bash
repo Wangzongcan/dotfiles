@@ -5,3 +5,7 @@ alias :q="exit"
 
 # vim
 alias vi=vim
+
+# ruby
+alias b="bundle"
+alias be="bundle exec"
