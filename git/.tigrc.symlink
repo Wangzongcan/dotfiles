@@ -1,0 +1,6 @@
+set line-graphics = utf-8
+set ignore-space = all
+
+set main-view = id:width=12 date:local author:full commit-title:graph=yes,refs=yes
+
+bind status + !git commit --amend
