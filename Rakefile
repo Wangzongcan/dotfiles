@@ -1,5 +1,5 @@
 desc 'install...'
-task :install do
+task :default do
   Dir['**/{*,.*}'].each do |name|
     next unless !File.directory?(name) && name =~ /.symlink$/
 
