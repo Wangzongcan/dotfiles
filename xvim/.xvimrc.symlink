@@ -9,7 +9,7 @@ set clipboard=unnamed
 " ui configuration
 set number
 set nowrap
-set laststatus=0
+" set laststatus=2
 
 " map
 
