@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Chruby
-source $(brew --prefix chruby)/share/chruby/chruby.sh
-source $(brew --prefix chruby)/share/chruby/auto.sh
-chruby 2.3.1
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
