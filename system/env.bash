@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
