@@ -25,7 +25,7 @@
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 [core]
     editor = vim
-    excludesfile = /Users/wangzongcan/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [push]
     default = simple
 [filter "hawser"]
