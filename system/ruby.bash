@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
