@@ -71,7 +71,10 @@ setup() {
     if $IS_MACOS; then
         echo $1
     elif $IS_LINUX; then
-        sudo apt update
+        sudo apt-get update
+
+        # ruby
+        sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
     fi
 
     install_env
