@@ -16,6 +16,8 @@ install_bash_it() {
         ~/.bash_it/install.sh
     fi
 
+    source ~/.bashrc
+
     reload
 }
 
@@ -43,6 +45,7 @@ install_rbenv() {
         git clone git://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
 
         bash-it enable plugin rbenv
+        bash-it enable alias bundler
 
         reload
 
