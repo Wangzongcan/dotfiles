@@ -1,16 +1,12 @@
 #!/bin/bash
 
 reload() {
-    source $HOME/.bashrc
+    source $HOME/.bash_profile
 }
 
 install() {
-    if type $1 > /dev/null 2>&1; then
-        return
-    fi
-
     if $IS_MACOS; then
-        echo $1
+        brew install $@
     elif $IS_LINUX; then
         sudo apt install $@
     fi
@@ -21,11 +17,4 @@ link_config_files() {
         local FILENAME=$(basename $CONFIG_FILE)
         ln -fs "$CONFIG_FILE" "$HOME/.$FILENAME"
     done
-}
-
-
-bash_it_enable() {
-    bash-it enable alias $1
-    bash-it enable completion $1
-    bash-it enable plugin $1
 }

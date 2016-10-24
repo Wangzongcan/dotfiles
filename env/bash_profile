@@ -1,0 +1,8 @@
+for DOTFILE in `find $HOME/.dotfiles/system -name "*.bash" -print`
+do
+    [ -f "$DOTFILE" ] && source "$DOTFILE"
+done
+
+if [ -f $HOME/.bashrc ]; then
+    source $HOME/.bashrc
+fi
