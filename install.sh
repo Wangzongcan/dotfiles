@@ -53,12 +53,7 @@ install_tmux() {
 }
 
 install_rbenv() {
-    if ! type rbenv > /dev/null 2>&1; then
-        git clone git://github.com/rbenv/rbenv.git $HOME/.rbenv
-        git clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
-        git clone git://github.com/sstephenson/rbenv-gem-rehash.git $HOME/.rbenv/plugins/rbenv-gem-rehash
-        git clone git://github.com/rkh/rbenv-update.git $HOME/.rbenv/plugins/rbenv-update
-    fi
+    install rbenv ruby-build
 
     bash-it enable plugin rbenv
 
