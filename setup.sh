@@ -12,42 +12,20 @@ install_env() {
     link_config_files "$DOTFILES_DIR/env"
 }
 
-install_bash_it() {
-    if [[ ! -d "$HOME/.bash_it" ]]; then
-        git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
-
-        $HOME/.bash_it/install.sh
-
-        bash-it update
-    fi
-
-    source $HOME/.bash_it/bash_it.sh
-}
-
 install_homebrew() {
     if ! type brew >/dev/null 2>&1; then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
-
-    bash-it enable completion brew
 }
 
 install_git() {
     install git tig
-
-    bash-it enable alias git
-    bash-it enable completion git
-    bash-it enable plugin git
 
     link_config_files "$DOTFILES_DIR/git"
 }
 
 install_tmux() {
     install tmux
-
-    bash-it enable alias tmux
-    bash-it enable completion tmux
-    bash-it enable plugin tmux
 
     link_config_files "$DOTFILES_DIR/tmux"
 }
@@ -61,22 +39,13 @@ install_rbenv() {
 }
 
 install_nvm() {
-    if ! type nvm > /dev/null 2>&1; then
-        git clone https://github.com/creationix/nvm.git $HOME/.nvm && cd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags`
-
-        npm i -g eslint
-        npm i -g tern
-    fi
-
-    bash-it enable completion nvm
-    bash-it enable plugin nvm
+    install nvm
 
     link_config_files "$DOTFILES_DIR/node"
 }
 
 setup() {
     install_env
-    install_bash_it
 
     if $IS_MACOS; then
         install_homebrew

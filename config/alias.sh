@@ -1,3 +1,8 @@
+# system
+alias l='ls -lh'
+alias ll='ls -lhA'
+
+# emacs
 alias e='emacsclient -t'
 alias en='emacsclient -n'
 alias ec='emacsclient -c'

@@ -1,6 +1,13 @@
-for DOTFILE in `find $HOME/.dotfiles/system -name "*.bash" -print`
+#!/bin/bash
+
+export DOTFILES_DIR="$HOME/.dotfiles"
+source "$DOTFILES_DIR/utils/variables.sh"
+
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
+for CONFIG_FILE in `find $HOME/.dotfiles/config -name "*.sh" -print`
 do
-    [ -f "$DOTFILE" ] && source "$DOTFILE"
+    [ -f "$CONFIG_FILE" ] && source "$CONFIG_FILE"
 done
 
 if [ -f $HOME/.bashrc ]; then

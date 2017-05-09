@@ -1,15 +1,23 @@
-# Path to the bash it configuration
-export BASH_IT="$HOME/.bash_it"
+#!/bin/bash
 
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
-export BASH_IT_THEME='minimal'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# Don't check mail when opening terminal.
-unset MAILCHECK
+# git-prompt
+GIT_PROMPT_THEME_FILE="$SOURCE_DIR/bash-git-prompt.sh"
 
-# Set this to false to turn off version control status checking within the prompt for all themes
-export SCM_CHECK=true
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
 
-# Load Bash It
-source $BASH_IT/bash_it.sh
+# chruby
+source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
+source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
+
+chruby "ruby-2.3"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ ! -d $NVM_DIR ] && mkdir $NVM_DIR
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && source "$(brew --prefix)/opt/nvm/nvm.sh"
