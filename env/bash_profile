@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH="/usr/local/sbin:$PATH"
 
 export DOTFILES_DIR="$HOME/.dotfiles"
 source "$DOTFILES_DIR/utils/variables.sh"

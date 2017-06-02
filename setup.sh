@@ -30,10 +30,8 @@ install_tmux() {
     link_config_files "$DOTFILES_DIR/tmux"
 }
 
-install_rbenv() {
-    install rbenv ruby-build
-
-    bash-it enable plugin rbenv
+install_chruby() {
+    install chruby ruby-install
 
     link_config_files "$DOTFILES_DIR/ruby"
 }
@@ -58,7 +56,7 @@ setup() {
 
     install_git
     install_tmux
-    install_rbenv
+    install_chruby
     install_nvm
 }
 
