@@ -27,7 +27,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
-	whitespace = cr-at-eol
+    whitespace = cr-at-eol
 [push]
     default = simple
 [filter "hawser"]
