@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+alias l='ls -lh'
+alias ll='ls -lhA'
