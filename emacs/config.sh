@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export EDITOR="emacsclient -t"
+
 alias e='emacsclient -t'
 alias en='emacsclient -n'
 alias ec='emacsclient -c'
