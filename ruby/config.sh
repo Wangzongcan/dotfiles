@@ -6,4 +6,4 @@ alias bu='bundle update'
 
 # chruby
 source "/usr/local/share/chruby/chruby.sh"
-chruby "2.4"
+source "/usr/local/share/chruby/auto.sh"
