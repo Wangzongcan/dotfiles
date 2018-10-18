@@ -1,8 +1,7 @@
 #!/bin/bash
 
-alias be='bundle exec'
-alias bi='bundle install'
-alias bu='bundle update'
+alias rake='bundle exec rake'
+alias rspec='bundle exec rspec'
 
 # chruby
 source "/usr/local/share/chruby/chruby.sh"
