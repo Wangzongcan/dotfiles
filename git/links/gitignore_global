@@ -1,6 +1,9 @@
 # .gitignore_global
 .DS_Store
 
+# docker
+docker-volumes/
+
 # rails
 dump.rdb
 
