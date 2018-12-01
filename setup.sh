@@ -8,7 +8,7 @@ function link_dotfiles() {
 
     if [ -d $LINKS_DIR ]; then
         for FILE_PATH in `find $LINKS_DIR -maxdepth 1 -mindepth 1`; do
-            ln -fs $FILE_PATH "$HOME/.$(basename $FILE_PATH)"
+            ln -fns $FILE_PATH "$HOME/.$(basename $FILE_PATH)"
         done
     fi
 }
