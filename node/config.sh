@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+# export PATH="/usr/local/opt/node@10/bin:$PATH"

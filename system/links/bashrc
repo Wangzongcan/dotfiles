@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
-alias l='ls -lh'
-alias ll='ls -lhA'
+for CONFIG_FILE in `find $HOME/.dotfiles -name "config.sh" -print`
+do
+    [ -f "$CONFIG_FILE" ] && source "$CONFIG_FILE"
+done
