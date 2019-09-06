@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for CONFIG_FILE in `find $HOME/.dotfiles -name "env.sh" -print`
-do
-    [ -f "$CONFIG_FILE" ] && source "$CONFIG_FILE"
-done
-
-[ -f $HOME/.bashrc ] && source $HOME/.bashrc

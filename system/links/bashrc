@@ -1,6 +1,0 @@
-#!/bin/bash
-
-for CONFIG_FILE in `find $HOME/.dotfiles -name "config.sh" -print`
-do
-    [ -f "$CONFIG_FILE" ] && source "$CONFIG_FILE"
-done
