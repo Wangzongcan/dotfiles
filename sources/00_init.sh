@@ -1,16 +1,8 @@
 #!/bin/bash
-
-export DOTFILES="$HOME/.dotfiles"
-
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
-export EDITOR="vim"
-
-alias ll="ls -lah"
+export LANG=zh_CN.UTF-8
 
 add-path() {
     if [[ -z $TMUX ]]; then
-       export PATH="$1:$PATH"
+        export PATH="$1:$PATH"
     fi
 }

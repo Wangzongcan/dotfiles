@@ -1,6 +1,0 @@
-[submodule "vendor/asdf"]
-	path = vendor/asdf
-	url = git://github.com/asdf-vm/asdf
-[submodule "vendor/bash-git-prompt"]
-	path = vendor/bash-git-prompt
-	url = git://github.com/magicmonty/bash-git-prompt

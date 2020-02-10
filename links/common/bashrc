@@ -1,5 +1,0 @@
-export DOTFILES="$HOME/.dotfiles"
-
-for file in $DOTFILES/sources/*; do
-    [[ -f $file ]] && source "$file"
-done

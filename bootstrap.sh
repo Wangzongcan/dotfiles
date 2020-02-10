@@ -1,12 +1,18 @@
 #!/bin/bash
 
-links="$HOME/.dotfiles/links"
+DOTFILES="$HOME/.dotfiles"
 
-function link_config() {
-    for file in $1; do
-        ln -fs $file "$HOME/.$(basename $file)"
+link_config() {
+    for file in $1/* $1/.[^.]*; do
+        [[ -r $file ]] && ln -fs $file "$HOME/$(basename $file)"
     done
 }
 
-link_config "${links}/common/*"
-[[ "$OSTYPE" =~ ^darwin ]] && link_config "${links}/macOS/*"
+link_config "$DOTFILES/links/runcom"
+link_config "$DOTFILES/links/git"
+link_config "$DOTFILES/links/tmux"
+link_config "$DOTFILES/links/ruby"
+
+if [[ "$(uname -s)" =~ ^Darwin ]]; then
+    link_config "$DOTFILES/links/hammerspoon"
+if
