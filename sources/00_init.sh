@@ -1,7 +1,8 @@
 #!/bin/bash
 export LANG=zh_CN.UTF-8
 
-alias ll='ls -la'
+alias l="ls -hl"
+alias ll="ls -ahl"
 
 add-path() {
     if [[ -z $TMUX ]]; then

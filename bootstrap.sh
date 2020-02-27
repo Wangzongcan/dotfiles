@@ -14,6 +14,5 @@ link_config "$DOTFILES/links/tmux"
 link_config "$DOTFILES/links/ruby"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-    echo 1
     link_config "$DOTFILES/links/hammerspoon"
 fi
