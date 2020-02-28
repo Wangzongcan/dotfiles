@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ "$(uname -s)" =~ ^Darwin ]] || return 1
+[[ "$(uname -s)" == "Darwin" ]] || return 1
 
 add-path "/usr/local/sbin"
 
