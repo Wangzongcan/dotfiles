@@ -12,6 +12,7 @@ link_config "$DOTFILES/links/runcom"
 link_config "$DOTFILES/links/git"
 link_config "$DOTFILES/links/tmux"
 link_config "$DOTFILES/links/ruby"
+link_config "$DOTFILES/links/asdf"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     link_config "$DOTFILES/links/hammerspoon"
