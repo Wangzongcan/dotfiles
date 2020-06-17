@@ -3,7 +3,7 @@
 asdf_path="$HOME/.asdf"
 
 if [[ ! -d $asdf_path ]]; then
-    git clone https://github.com/asdf-vm/asdf $asdf_path
+    git clone --depth 1 https://github.com/asdf-vm/asdf $asdf_path
     source $asdf_path/asdf.sh
 fi
 
