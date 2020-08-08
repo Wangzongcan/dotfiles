@@ -46,23 +46,6 @@ hs.hotkey.bind({ 'alt', 'cmd' }, 'Right', function()
   win:setFrame(f)
 end)
 
--- Input Method
-local function Chinese()
-   hs.keycodes.currentSourceID('com.apple.inputmethod.SCIM.ITABC')
-end
-
-local function English()
-   hs.keycodes.currentSourceID('com.apple.keylayout.ABC')
-end
-
-local function updateFocusAppInputMethod(appName, setInputMethodFunction)
-   wf = hs.window.filter
-   wf.new(appName):subscribe(wf.windowFocused, setInputMethodFunction)
-end
-
-updateFocusAppInputMethod('Emacs', English)
-updateFocusAppInputMethod('iTerm2', English)
-
 -- Reloading
 hs.hotkey.bind(hyper, 'R', function() hs.reload() end)
 hs.alert.show('Config loaded')
