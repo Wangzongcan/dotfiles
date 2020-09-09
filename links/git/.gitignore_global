@@ -3,6 +3,7 @@
 
 # docker
 docker-volumes/
+docker-compose.yml
 
 # rails
 dump.rdb
@@ -14,3 +15,6 @@ GTAGS
 
 # tern
 .tern-port
+
+# project
+.project/
