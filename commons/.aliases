@@ -1,10 +1,9 @@
 # system
 alias ls='ls -G'
-alias l='ls -hlG'
-alias ll='ls -ahlG'
+alias l='ls -hl'
+alias ll='l -a'
 
 # ruby
-alias b='bundle'
 alias be='bundle exec'
 
 # tmux

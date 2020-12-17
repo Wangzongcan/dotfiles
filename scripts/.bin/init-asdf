@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+
+git clone https://github.com/asdf-vm/asdf.git --depth 1 ~/.asdf
 
 # ruby
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
