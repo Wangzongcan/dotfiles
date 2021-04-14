@@ -12,8 +12,8 @@ ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 PROMPT='%{$fg_bold[red]%}%1~%b$(git_super_status) %{$fg_bold[cyan]%}»%{$reset_color%} '
 
-zinit snippet OMZ::lib/completion.zsh
-zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::history.zsh
 
 # asdf
 [[ -f $HOME/.asdf/asdf.sh ]] && source $HOME/.asdf/asdf.sh
