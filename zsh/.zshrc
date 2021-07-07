@@ -25,7 +25,7 @@ fpath=($HOME/.asdf/completions $fpath)
 # aliases
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
 
-# aliases
+# localrc
 [[ -f $HOME/.localrc ]] && source $HOME/.localrc
 
 autoload -Uz compinit && compinit
