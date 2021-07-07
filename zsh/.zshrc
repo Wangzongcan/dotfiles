@@ -19,8 +19,8 @@ zinit snippet OMZL::history.zsh
 [[ -f $HOME/.asdf/asdf.sh ]] && source $HOME/.asdf/asdf.sh
 fpath=($HOME/.asdf/completions $fpath)
 
-# fzf
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+# zoxide
+eval "$(zoxide init zsh)"
 
 # aliases
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
