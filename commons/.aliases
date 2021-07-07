@@ -9,7 +9,7 @@ alias rspec="be rspec"
 
 # tmux
 alias ta="tmux attach-session"
-alias tn="tmux -u new -s $(basename $PWD)"
+alias tn="tmux -u new -s \$(basename \$PWD)"
 
 # emacs
 alias e="emacsclient -t -a ''"
